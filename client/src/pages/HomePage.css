@@ -1,0 +1,139 @@
+.HomePage {
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header h1 {
+    font-size: 3em;
+    margin: 0;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    width: 60%;
+    max-width: 300px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+  }
+  
+  .search-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s;
+  }
+  
+  .search-button:hover {
+    background-color: #5d9bf7;
+  }
+  
+  .featured-books {
+    margin: 40px 100px;
+    width: calc(100% - 200px);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .featured-books h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .book {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .book:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .book img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .book h3 {
+    font-size: 1.4em;
+    margin: 10px 0 5px;
+  }
+  
+  .book p {
+    font-size: 1em;
+    color: #555;
+  }
+  
+  .cta {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .cta-button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  .view-details-button {
+    background-color: #f3f7f4;
+    color: rgba(11, 11, 11, 0.899);
+    border: none;
+    padding: 13px 16px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .view-details-button:hover {
+    background-color: #368cf5;
+  }
+  
+  
