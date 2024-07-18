@@ -16,8 +16,8 @@ const booksData = [
   { title: "Sapiens: A Brief History of Humankind", author: "Yuval Noah Harari", image: "https://images-na.ssl-images-amazon.com/images/I/713jIoMO3UL.jpg" },
   { title: "To Kill a Mockingbird", author: "Harper Lee", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe7FSXuLfWs-b5JyLrZwGsNM6fk0-ikkBV2g&s" },
   { title: "The Chronicles of Narnia", author: "C.S. Lewis", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsbXrEJ2dlo1hXGzh43Uh8mG8wKPJTDZ2hJw&s" },
-  { title: "Educated", author: "Tara Westover", image: "https://images-na.ssl-images-amazon.com/images/I/81WojUxbbFL.jpg" },
-  { title: "Ugly Love", author: "Colleen Hoover", image: "https://media1.popsugar-assets.com/files/thumbor/vbvgNEmpZcqQd-fZvnlFw6Q5V3c=/fit-in/1000x1555/filters:format_auto():extract_cover():upscale()/2022/09/19/376/n/48749861/3b9d87e33f888b6c_61QR7qoEYVL.jpg" },
+  { title: "Dead Connection", author: "Alafair Burke", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3TaSk0nCa4J0k5RFOqvscD8Iq5d_TJJQ4zg&s" },
+  { title: "Wicked", author: "Gregory Maguire", image: "https://upload.wikimedia.org/wikipedia/en/7/70/WickedBookCover.jpg" },
 ];
 
 function HomePage() {
