@@ -8,6 +8,7 @@ import GenresPage from './pages/GenresPage';
 import AuthorsPage from './pages/AuthorsPage';
 import BookDetailsPage from './pages/BookDetailsPage';// Corrected import path
 import LibraryPage from './pages/LibraryPage';
+import AuthorDetails from './components/AuthorDetails';
 import './index.css'; // Optional: if you have a CSS file for App component
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/authors" component={AuthorsPage} />
         <Route path="/book/:id" component={BookDetailsPage} />
         <Route path="/library" component={LibraryPage} />
+        <Route path="/artist/:id" component={AuthorDetails} />
       </Switch>
     </div>
   );

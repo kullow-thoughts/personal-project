@@ -1,0 +1,29 @@
+.author-details {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .author-details p {
+    font-size: 0.9em;
+    color: #080808;
+    margin-bottom: 8px;
+  }
+  
+  .author-details p.label {
+    font-weight: bold;
+    display: inline;
+    margin-right: 8px;
+  }
+  
+  .author-details p.value {
+    display: inline;
+  }
+  
+  .author-details p:last-of-type {
+    font-style: italic;
+  }
+  

@@ -24,7 +24,7 @@ const BookshelfPage = () => {
   const handleAddBook = (event) => {
     event.preventDefault();
     const newBook = {
-      id: Date.now(), 
+      id: Date.now(),
       title: event.target.title.value,
       genre: event.target.genre.value,
       author_name: event.target.author.value,
@@ -32,12 +32,12 @@ const BookshelfPage = () => {
       comments: []
     };
     setBooks([...books, newBook]);
-    event.target.reset(); // Reset the form after submission
+    event.target.reset();
   };
 
   // Function to add a book to the library
   const handleAddToLibrary = (book) => {
-    const bookToAdd = { ...book, likes: 0, comments: [] }; // Initialize likes and comments
+    const bookToAdd = { ...book, likes: 0, comments: [] };
     setLibrary([...library, bookToAdd]);
   };
 
@@ -72,7 +72,7 @@ const BookshelfPage = () => {
   return (
     <div className="BookshelfPage">
       <h2>Bookshelf</h2>
-      <form onSubmit={handleAddBook}>
+      <form className="add-book-form" onSubmit={handleAddBook}>
         <label>
           Title:
           <input type="text" name="title" required />
@@ -87,43 +87,58 @@ const BookshelfPage = () => {
         </label>
         <button type="submit">Add Book</button>
       </form>
+      
       <h3>Books</h3>
-      <ul>
+      <ul className="books-list">
         {books.map((book) => (
-          <li key={book.id}>
-            {book.title} - {book.genre} - {book.author_name}{' '}
-            <button onClick={() => handleAddToLibrary(book)}>Add to Library</button>
-            <button onClick={() => handleRemoveFromBooks(book.id)}>Remove</button>
+          <li key={book.id} className="book-item">
+            <div className="book-info">
+              <span className="book-title">{book.title}</span>
+              <span className="book-genre">{book.genre}</span>
+              <span className="book-author">{book.author_name}</span>
+            </div>
+            <div className="button-group">
+              <button className="add-button" onClick={() => handleAddToLibrary(book)}>Add to Library</button>
+              <button className="remove-button" onClick={() => handleRemoveFromBooks(book.id)}>Remove</button>
+            </div>
           </li>
         ))}
       </ul>
+
       <h3>Library</h3>
-      <ul>
+      <ul className="library-list">
         {library.map((book) => (
-          <li key={book.id}>
-            {book.title} - {book.genre} - {book.author_name}{' '}
-            <div>
-              Likes: {book.likes}{' '}
-              <button onClick={() => handleAddLike(book.id)}>❤️</button>
+          <li key={book.id} className="library-item">
+            <div className="book-info">
+              <span className="book-title">{book.title}</span>
+              <span className="book-genre">{book.genre}</span>
+              <span className="book-author">{book.author_name}</span>
             </div>
-            {book.comments.length > 0 && (
-              <ul>
-                {book.comments.map((comment, index) => (
-                  <li key={index}>{comment}</li>
-                ))}
-              </ul>
-            )}
-            <input
-              type="text"
-              placeholder="Add comment..."
-              onKeyDown={(e) => {
-                if (e.key === 'Enter') {
-                  handleAddComment(book.id, e.target.value);
-                  e.target.value = '';
-                }
-              }}
-            />
-            <button onClick={() => handleRemoveFromLibrary(book.id)}>Remove</button>
+            <div className="book-actions">
+              <div className="likes-section">
+                <span>{book.likes} </span>
+                <button className="like-button" onClick={() => handleAddLike(book.id)}>❤️</button>
+              </div>
+              {book.comments.length > 0 && (
+                <ul className="comments-list">
+                  {book.comments.map((comment, index) => (
+                    <li key={index} className="comment-item">{comment}</li>
+                  ))}
+                </ul>
+              )}
+              <input
+                type="text"
+                className="comment-input"
+                placeholder="Add comment..."
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    handleAddComment(book.id, e.target.value);
+                    e.target.value = '';
+                  }
+                }}
+              />
+              <button className="remove-button" onClick={() => handleRemoveFromLibrary(book.id)}>Remove</button>
+            </div>
           </li>
         ))}
       </ul>

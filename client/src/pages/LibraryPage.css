@@ -1,103 +1,250 @@
+/* General styles for the page */
 .BookshelfPage {
-    font-family: 'Arial', sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .BookshelfPage h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  .BookshelfPage form {
-    margin-bottom: 20px;
-  }
-  
-  .BookshelfPage form label {
-    display: block;
-    margin-bottom: 10px;
-    color: #555;
-  }
-  
-  .BookshelfPage form input[type="text"] {
-    width: calc(100% - 10px);
-    padding: 8px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .BookshelfPage form button[type="submit"] {
-    padding: 8px 16px;
-    font-size: 14px;
-    background-color: #0eaacd;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .BookshelfPage h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .BookshelfPage ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .BookshelfPage ul li {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .BookshelfPage ul li:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .BookshelfPage ul li div {
-    margin-bottom: 10px;
-  }
-  
-  .BookshelfPage ul li button {
-    padding: 6px 12px;
-    font-size: 14px;
-    background-color: #0eaacd;
-    color: rgb(254, 250, 250);
-    border: none;
-    border-radius: 34px;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  
-  .BookshelfPage ul li input[type="text"] {
-    width: calc(100% - 90px);
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 1px 3px;
-    border-width: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #f4f7f8;
+  border-radius: 8px;
+}
 
-  }
-  
-  .BookshelfPage ul li ul {
-    list-style-type: none;
-    padding-left: 20px;
-    margin-top: 10px;
-  }
-  
-  .BookshelfPage ul li ul li {
-    padding: 6px 0;
-  }
-  
-  
+/* Header styles */
+.BookshelfPage h2 {
+  font-size: 2.2rem;
+  color: #333;
+  border-bottom: 3px solid #007bff;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form styles */
+.add-book-form {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-book-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.add-book-form input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.add-book-form input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.add-book-form button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-book-form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.add-book-form button:active {
+  background-color: #004494;
+  transform: translateY(1px);
+}
+
+/* Books list styles */
+.books-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.book-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.book-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.book-genre,
+.book-author {
+  font-size: 1rem;
+  color: #666;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-end;
+}
+
+.add-button,
+.remove-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.add-button:active {
+  background-color: #0056b3;
+  transform: translateY(1px);
+}
+
+.remove-button {
+  background-color: #dc3545;
+  color: white;
+}
+
+.remove-button:hover {
+  background-color: #c82333;
+  transform: translateY(-2px);
+}
+
+.remove-button:active {
+  background-color: #bd2130;
+  transform: translateY(1px);
+}
+
+/* Library list styles */
+.library-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.library-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.library-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.book-actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.likes-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.likes-section span {
+  margin-right: 10px;
+}
+
+.like-button {
+  background-color: #f8f8f5;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.like-button:hover {
+  background-color: #f50909;
+  transform: translateY(-2px);
+}
+
+.like-button:active {
+  background-color: #e67e22;
+  transform: translateY(1px);
+}
+
+.comments-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comment-item {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.comment-input:focus {
+  border-color: #007bff;
+  outline: none;
+}

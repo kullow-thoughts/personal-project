@@ -53,7 +53,7 @@ function HomePage() {
     return (
       <div className="HomePage">
         <header className="header">
-          <h1>Welcome to ReadIt</h1>
+          <h1>Welcome to Bookhub</h1>
           <div className="search-container">
             <input
               type="text"
