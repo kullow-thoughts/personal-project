@@ -71,7 +71,7 @@ const BookshelfPage = () => {
 
   return (
     <div className="BookshelfPage">
-      <h2>Bookshelf</h2>
+      <h2>BookShelf</h2>
       <form className="add-book-form" onSubmit={handleAddBook}>
         <label>
           Title:

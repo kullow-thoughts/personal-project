@@ -1,0 +1,76 @@
+.navbar {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    padding: 30px 5%;
+    box-shadow: 0 4px 10px rgba(35, 3, 3, 0.3);
+    border-radius: 8px;
+  }
+  
+  .navList {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: row; /* Ensure items are aligned horizontally */
+  }
+  
+  .navItem {
+    margin: 0 15px;
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .navLink:hover {
+    color: yellow;
+    transform: scale(1.1);
+  }
+  
+  .navLink::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: yellow;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+  }
+  
+  .navLink:hover::after {
+    width: 100%;
+  }
+  
+  .navIcon {
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .navLink:hover .navIcon {
+    transform: rotate(20deg);
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 15px;
+    }
+  
+    .navList {
+      flex-direction: row; /* Keep items aligned horizontally on smaller screens */
+      justify-content: space-between; /* Adjust spacing for smaller screens */
+      flex-wrap: wrap; /* Allow items to wrap if they don't fit in one line */
+    }
+  
+    .navItem {
+      margin: 10px 0;
+    }
+  }
+  

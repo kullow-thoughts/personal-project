@@ -11,11 +11,32 @@
   font-family: Arial, sans-serif;
 }
 
-h2 {
+.authors-header {
+  font-size: 1.5em;
   text-align: center;
+  margin: 10px 0;
+  padding: 10px;
   color: #333;
-  margin-bottom: 20px;
+  background: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
 }
+
+.authors-header::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 5px;
+  background: #333;
+  border-radius: 5px;
+}
+
 
 .author-card-container {
   display: flex;

@@ -14,7 +14,7 @@ function AuthorsPage() {
 
   return (
     <div className="authors-page">
-      <h2>Authors</h2>
+      <h2 className="authors-header">Authors</h2>
       <div className="author-card-container">
         {authors.map(author => (
           <AuthorCard key={author.id} author={author} />
